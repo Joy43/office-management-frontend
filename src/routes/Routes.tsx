@@ -47,8 +47,13 @@ import { ForgotPassword } from "@/pages/auth/ForgotPassword";
 import { ResetPassword } from "@/pages/auth/ResetPassword";
 import VerifyOtpPage from "@/pages/auth/VerifyOtpPage";
 import PrivateRoute from "./PrivateRoute";
+import Onboarding from "@/pages/onbording/Onboarding";
 
 const Routes = createBrowserRouter([
+  {
+    path: "/",
+    element:<Onboarding/>
+  },
   {
     path: "/login",
     element: <LoginPage />,
