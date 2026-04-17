@@ -1,6 +1,14 @@
-
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
+import {
+  FaLock,
+  FaUsers,
+  FaChartLine,
+  FaCheckCircle,
+  FaArrowRight,
+  FaArrowLeft,
+  FaRocket,
+} from "react-icons/fa";
 
 const steps = ["Company", "Admin", "Finish"];
 
@@ -19,7 +27,9 @@ const Onboarding = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-10 text-white">
-          <h1 className="text-4xl font-bold mb-3">Smart Employee System 🚀</h1>
+          <h1 className="text-4xl font-bold mb-3 flex items-center gap-2">
+            <FaRocket /> Smart Employee System
+          </h1>
           <p className="text-sm opacity-80">
             Powerful tools to manage your team, track performance and scale your
             business.
@@ -54,23 +64,23 @@ const Onboarding = () => {
 
               <div className="space-y-4">
                 <div className="p-4 rounded-xl bg-white/20 text-white">
-             Create and manage your company structure easily
+                  Create and manage your company structure easily
                 </div>
 
                 <div className="p-4 rounded-xl bg-white/20 text-white">
-                   Track employee performance & analytics
+                  Track employee performance & analytics
                 </div>
 
                 <div className="p-4 rounded-xl bg-white/20 text-white">
-                Automate HR workflows & payroll
+                  Automate HR workflows & payroll
                 </div>
               </div>
 
               <button
                 onClick={next}
-                className="mt-8 w-full py-3 rounded-xl bg-gradient-to-r from-[#7A1CAC] to-[#AD49E1] text-white font-semibold hover:scale-105 transition"
+                className="mt-8 w-full py-3 rounded-xl bg-gradient-to-r from-[#7A1CAC] to-[#AD49E1] text-white font-semibold hover:scale-105 transition flex items-center justify-center gap-2"
               >
-                Get Started →
+                Get Started <FaArrowRight />
               </button>
             </div>
           )}
@@ -83,31 +93,32 @@ const Onboarding = () => {
               </h2>
 
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-white/20 text-white">
-                  🔐 Full system control & permissions
+                <div className="p-4 rounded-xl bg-white/20 text-white flex items-center gap-2">
+                  <FaLock /> Full system control & permissions
                 </div>
 
-                <div className="p-4 rounded-xl bg-white/20 text-white">
-                  👥 Manage teams, roles & departments
+                <div className="p-4 rounded-xl bg-white/20 text-white flex items-center gap-2">
+                  <FaUsers /> Manage teams, roles & departments
                 </div>
 
-                <div className="p-4 rounded-xl bg-white/20 text-white">
-                  📁 Access reports & insights dashboard
+                <div className="p-4 rounded-xl bg-white/20 text-white flex items-center gap-2">
+                  <FaChartLine /> Access reports & insights dashboard
                 </div>
               </div>
 
               <div className="flex justify-between mt-8">
                 <button
                   onClick={prev}
-                  className="px-5 py-2 bg-white/20 rounded-lg text-white"
+                  className="px-5 py-2 bg-white/20 rounded-lg text-white flex items-center gap-2"
                 >
-                  Back
+                  <FaArrowLeft /> Back
                 </button>
+
                 <button
                   onClick={next}
-                  className="px-5 py-2 bg-gradient-to-r from-[#7A1CAC] to-[#AD49E1] rounded-lg text-white"
+                  className="px-5 py-2 bg-gradient-to-r from-[#7A1CAC] to-[#AD49E1] rounded-lg text-white flex items-center gap-2"
                 >
-                  Next Page
+                  Next Page <FaArrowRight />
                 </button>
               </div>
             </div>
@@ -116,8 +127,8 @@ const Onboarding = () => {
           {/* STEP 3 - FINISH */}
           {step === 2 && (
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-green-400 mb-4">
-                 All Set!
+              <h2 className="text-3xl font-bold text-green-400 mb-4 flex items-center justify-center gap-2">
+                <FaCheckCircle /> All Set!
               </h2>
 
               <p className="text-white/80 mb-6">
@@ -133,10 +144,11 @@ const Onboarding = () => {
               <div className="flex justify-center gap-4">
                 <button
                   onClick={prev}
-                  className="px-5 py-2 bg-white/20 text-white rounded-lg"
+                  className="px-5 py-2 bg-white/20 text-white rounded-lg flex items-center gap-2"
                 >
-                  Back
+                  <FaArrowLeft /> Back
                 </button>
+
                 <Link to={"/login"}>
                   <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:scale-105 transition">
                     Go Dashboard
