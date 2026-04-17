@@ -12,7 +12,6 @@ const Onboarding = () => {
 
   return (
     <div className="min-h-screen flex bg-gradient-to-br from-[#2E073F] via-[#7A1CAC] to-[#AD49E1]">
-      {/* LEFT IMAGE */}
       <div className="hidden md:flex w-1/2 relative">
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
@@ -46,7 +45,7 @@ const Onboarding = () => {
             ))}
           </div>
 
-          {/* STEP 1 - COMPANY OVERVIEW */}
+          {/* STEP  - COMPANY OVERVIEW */}
           {step === 0 && (
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">
@@ -55,15 +54,15 @@ const Onboarding = () => {
 
               <div className="space-y-4">
                 <div className="p-4 rounded-xl bg-white/20 text-white">
-                  🏢 Create and manage your company structure easily
+             Create and manage your company structure easily
                 </div>
 
                 <div className="p-4 rounded-xl bg-white/20 text-white">
-                  📊 Track employee performance & analytics
+                   Track employee performance & analytics
                 </div>
 
                 <div className="p-4 rounded-xl bg-white/20 text-white">
-                  ⚡ Automate HR workflows & payroll
+                Automate HR workflows & payroll
                 </div>
               </div>
 
