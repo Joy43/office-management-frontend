@@ -55,7 +55,7 @@ export const isTokenExpired = (token: string): boolean => {
 
     // Check expiration time (exp is in seconds)
     if (payload.exp) {
-      const expirationTime = payload.exp * 1000; // Convert to milliseconds
+      const expirationTime = payload.exp * 1000; 
       const currentTime = Date.now();
 
       // Consider token expired if less than 1 minute remaining

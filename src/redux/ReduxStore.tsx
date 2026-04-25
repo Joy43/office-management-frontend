@@ -7,6 +7,7 @@ import {
 } from "react-redux";
 import { baseApi } from "./baseApi"; 
 import authReducer from "./features/auth/authSlice";
+import notificationReducer from "./features/notification/notification.slice";
 import {
   persistReducer,
   FLUSH,
@@ -26,8 +27,9 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  [baseApi.reducerPath]: baseApi.reducer, 
-  auth: authReducer, 
+  [baseApi.reducerPath]: baseApi.reducer,
+  auth: authReducer,
+  notifications: notificationReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

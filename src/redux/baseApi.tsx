@@ -36,6 +36,7 @@ export const baseApi = createApi({
     "TeamMembers",
     "TeamEvents",
     "staff",
+    "Notifications"
   ],
   endpoints: () => ({}),
 });

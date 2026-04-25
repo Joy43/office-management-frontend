@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export type TNamespace = "/" | "/pv/message" | "/notificationsnow" | "/activity";
+export type TNamespace = "/" | "/live-support" | "/notifications" | "/activity";
 
 export interface ISocketNamespaceConfig {
-
   requiresAuth: boolean;
 
   //connection options
@@ -15,7 +14,6 @@ export interface ISocketNamespaceConfig {
   reconnectionDelay?: number;
   reconnectionDelayMax?: number;
 
-  
   query?: Record<string, any>;
   extraHeaders?: Record<string, string>;
 }
@@ -31,13 +29,13 @@ export const SOCKET_NAMESPACES_CONFIG: Record<
     reconnection: true,
   },
 
-  "/pv/message": {
+  "/live-support": {
     requiresAuth: true,
     autoConnect: false,
     transports: ["websocket"],
     reconnection: true,
   },
-  "/notificationsnow": {
+  "/notifications": {
     requiresAuth: true,
     autoConnect: false,
     transports: ["websocket"],
