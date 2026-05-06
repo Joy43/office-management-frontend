@@ -4,6 +4,9 @@ import { baseApi } from "@/redux/baseApi";
 
 export const staffDashboardApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
+
+    // ------------------ Staff Dashboard Endpoints ------------------
+    
     // 1. Get Dashboard Summary Stats
     getStaffDashboardData: builder.query({
       query: () => ({

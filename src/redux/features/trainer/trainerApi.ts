@@ -77,6 +77,28 @@ export const trainerApi = baseApi.injectEndpoints({
       }),
       // provideTags: ["Users"], // Jodi automatic refetch lagbe mone koro
     }),
+
+    getTrainerBranchPerformance: builder.query({
+      query: (params) => ({
+        url: "/trainer-branch-performance",
+        method: "GET",
+        params,
+      }),
+      providesTags: ["BranchPerformance"],
+    }),
+
+    // ------------------ Feedback & Reporting ------------------
+    getTrainerFeedback: builder.query({
+      query: (params) => ({
+        url: "/trainer-feedback",
+        method: "GET",
+        params,
+      }),
+      providesTags: ["BranchPerformance"],
+    }), 
+    // ------------------ Additional Endpoints (if needed) ------------------
+
+
   }),
 });
 
